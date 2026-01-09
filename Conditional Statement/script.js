@@ -83,3 +83,25 @@ if (val<70){
 }else{
     console.log("A");
 }
+
+
+// calculator using switch case
+let num1=40;
+let num2=4;
+let operator='*';
+switch(operator){
+    case '+':
+        console.log(num1+num2);
+    break;
+    case '-':
+        console.log(num1-num2);
+    break;
+    case '*':
+        console.log(num1*num2);
+    break;
+    case '/':
+        console.log(num1/num2);
+    break;
+    default:
+        console.log("invalid operator");
+}
