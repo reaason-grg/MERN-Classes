@@ -56,3 +56,72 @@ const sub=(a,b)=>{
 }
 let result=sub(7,3);
 console.log(result);
+
+// First class function--------------//
+// Functions treated as a value
+//
+
+function abc(num){
+    num();
+}
+abc(function(){
+    console.log("hello")
+})
+
+
+function xyz(){
+    return function(){
+        console.log("thank you")
+    };
+}
+xyz()()
+
+// Higher order function---------------------------//
+// function as a parameter and return function
+
+
+// closures: function that return another function and that returnrd function can access the value of the parent funuction---------------------------------------------------------------------------//
+
+// function abc(){
+//     let val=45;
+//     return function(){
+//         console.log(val);
+//     }
+// }
+// abc()()
+
+function counter(){
+    let count=0;
+    return function(){
+        count++;
+        return count;
+    }
+}
+let add1=counter();
+console.log(add1());
+console.log(add1());
+console.log(add1());
+console.log(add1());
+
+
+// Pure and Impure functions--------------------------------//
+
+// pure function changes the value of outside
+// let num=45;
+// // function abc(){
+// //     console.log("hi");
+// // }
+// // abc();
+
+
+// // impure function cghanges the outsides value
+// function xyz(){
+//     return ++num;
+// }
+// xyz();
+
+// IIFE(Immediatels Invoked Function Expression)---------------------//
+(function abc(){
+    console.log("Hello, how are you?")
+})();
+
