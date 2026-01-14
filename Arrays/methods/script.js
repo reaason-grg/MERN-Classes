@@ -35,3 +35,5 @@ console.log(marks.indexOf(56,4));
 // includes---------------------------------------//
 marks.includes();   //returns boolean value
 console.log(marks.includes(560));
+
+// 
